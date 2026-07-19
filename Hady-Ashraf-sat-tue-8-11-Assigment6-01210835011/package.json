@@ -1,0 +1,21 @@
+{
+  "name": "hady-ashraf-sat-tue-8-11-assigment6-01210835011",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.23.0",
+    "nodemon": "^3.1.14",
+    "sequelize": "^6.37.8",
+    "tedious": "^20.0.0"
+  }
+}

@@ -141,7 +141,6 @@ USE RetailStoreDB;
 GO
 
 CREATE USER store_manager
-FOR LOGIN store_manager;
 GO
 
 GRANT SELECT, INSERT, UPDATE
