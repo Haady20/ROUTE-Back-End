@@ -1,0 +1,554 @@
+{
+  "info": {
+    "_postman_id": "abbbd820-e4b7-4854-bdb8-c87e39a758e2",
+    "name": "Route Assignment Seven",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50605645",
+    "_collection_link": "https://go.postman.co/collection/50605645-abbbd820-e4b7-4854-bdb8-c87e39a758e2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Book",
+      "item": [
+        {
+          "name": "CreateBookCollection",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/collection/books",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "collection",
+                "books"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "createIndex",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/collection/books/index",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "collection",
+                "books",
+                "index"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateBook",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"How Music Works\",\r\n  \"author\": \"David Byrne\",\r\n  \"year\": 2012,\r\n  \"genres\": [\r\n    \"Music\",\r\n    \"Non-Fiction\",\r\n    \"Theory\"\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateBooks",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  {\r\n    \"title\": \"Dune\",\r\n    \"author\": \"Frank Herbert\",\r\n    \"year\": 1965,\r\n    \"genres\": [\r\n      \"Sci-Fi\",\r\n      \"Adventure\"\r\n    ]\r\n  },\r\n  {\r\n    \"title\": \"1984\",\r\n    \"author\": \"George Orwell\",\r\n    \"year\": 1949,\r\n    \"genres\": [\r\n      \"Dystopian\",\r\n      \"Political Fiction\"\r\n    ]\r\n  },\r\n  {\r\n    \"title\": \"The Hobbit\",\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"year\": 1937,\r\n    \"genres\": [\r\n      \"Fantasy\",\r\n      \"Adventure\"\r\n    ]\r\n  }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/books/batch",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "batch"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateBook",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"_id\": \"6a6a1b0c826b2ffb45a37093\",\r\n    \"year\": 2027\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/books/Future",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "Future"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FindBookByTitle",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/books/title?title=How Music Works",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "title"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "How Music Works"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FindBooksByRange",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/books/year?from=1937&to=1965",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "year"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "1937"
+                },
+                {
+                  "key": "to",
+                  "value": "1965"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FindBooksByGener",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/genre?genres=Adventure",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "genre"
+              ],
+              "query": [
+                {
+                  "key": "genres",
+                  "value": "Adventure"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FindLimitedBooks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/skip-limit",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "skip-limit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetIntBookYear",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/year-integer",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "year-integer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FindBooksExcludeGenres",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/exclude-genres",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "exclude-genres"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RemoveBooksByYear",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/before-year?year=2027",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "before-year"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2027"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FindBooksAggregate1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/aggregate1?year=1900",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "aggregate1"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "1900"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FindBooksAggregate2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/aggregate2?year=1900",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "aggregate2"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "1900"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FindBooksAggregate3",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/aggregate3?year=2000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "aggregate3"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2000"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FindBooksAggregate4",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/aggregate4?year=2000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "aggregate4"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2000"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Author",
+      "item": [
+        {
+          "name": "CreateAuthorCollection",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Author1\",\r\n  \"nationality\": \"British\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/collection/authors",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "collection",
+                "authors"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Logs",
+      "item": [
+        {
+          "name": "CreateCappedCollection",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/collection/logs/capped",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "collection",
+                "logs",
+                "capped"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateLog",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"book_id\": \"6a6a1b0c826b2ffb45a37093\",\r\n    \"action\": \"borrowed\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/logs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "logs"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
